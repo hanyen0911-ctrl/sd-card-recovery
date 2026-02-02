@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sandisk-extreme-pro-128gb",
+    "brand": "SanDisk",
+    "model": "Extreme Pro",
+    "capacity": 128,
+    "capacityUnit": "GB",
+    "type": "SDXC",
+    "speedClass": {
+      "uhs": "U3",
+      "video": "V30",
+      "app": "A2"
+    },
+    "readSpeed": 200,
+    "writeSpeed": 90,
+    "price": 1200,
+    "currency": "TWD",
+    "useCase": ["專業攝影", "4K錄影", "高速連拍"],
+    "durability": {
+      "waterproof": true,
+      "shockproof": true,
+      "xrayProof": true,
+      "temperatureRange": "-25°C to 85°C"
+    },
+    "warranty": "終身保固",
+    "imageUrl": "/images/sandisk-extreme-pro.jpg",
+    "productUrl": "https://example.com/product/sandisk-extreme-pro-128gb",
+    "updatedAt": "2026-01-29"
+  },
+  {
+    "id": "samsung-evo-plus-256gb",
+    "brand": "Samsung",
+    "model": "EVO Plus",
+    "capacity": 256,
+    "capacityUnit": "GB",
+    "type": "SDXC",
+    "speedClass": {
+      "uhs": "U3",
+      "video": "V30",
+      "app": "A2"
+    },
+    "readSpeed": 130,
+    "writeSpeed": 90,
+    "price": 1500,
+    "currency": "TWD",
+    "useCase": ["日常拍攝", "4K錄影", "Switch遊戲"],
+    "durability": {
+      "waterproof": true,
+      "shockproof": true,
+      "xrayProof": true,
+      "temperatureRange": "-25°C to 85°C"
+    },
+    "warranty": "10年保固",
+    "imageUrl": "/images/samsung-evo-plus.jpg",
+    "productUrl": "https://example.com/product/samsung-evo-plus-256gb",
+    "updatedAt": "2026-01-29"
+  },
+  {
+    "id": "kingston-canvas-react-plus-64gb",
+    "brand": "Kingston",
+    "model": "Canvas React Plus",
+    "capacity": 64,
+    "capacityUnit": "GB",
+    "type": "SDXC",
+    "speedClass": {
+      "uhs": "U3",
+      "video": "V90",
+      "app": "A1"
+    },
+    "readSpeed": 300,
+    "writeSpeed": 260,
+    "price": 1800,
+    "currency": "TWD",
+    "useCase": ["專業攝影", "8K錄影", "高速連拍"],
+    "durability": {
+      "waterproof": true,
+      "shockproof": true,
+      "xrayProof": false,
+      "temperatureRange": "-25°C to 85°C"
+    },
+    "warranty": "終身保固",
+    "imageUrl": "/images/kingston-canvas-react-plus.jpg",
+    "productUrl": "https://example.com/product/kingston-canvas-react-plus-64gb",
+    "updatedAt": "2026-01-29"
+  }
+]

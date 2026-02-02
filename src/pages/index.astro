@@ -1,0 +1,175 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="首頁">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-5xl font-bold mb-6">SD 卡資料救援專家</h1>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        格式化誤刪不用慌！專業指南幫你找回珍貴資料
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a href="/diagnose" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 text-lg">
+          🔍 立即診斷問題
+        </a>
+        <a href="/problems" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 text-lg">
+          查看解決方案
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+          <div class="text-gray-600">誤刪檔案救援成功率</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-blue-600 mb-2">85%</div>
+          <div class="text-gray-600">格式化後救援成功率</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-blue-600 mb-2">20+</div>
+          <div class="text-gray-600">專業救援工具推薦</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+          <div class="text-gray-600">詳細教學文章</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Problems -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">常見 SD 卡問題</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Problem Card 1 -->
+        <a href="/problems/formatted" class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-xl font-bold mb-2">意外格式化</h3>
+          <p class="text-gray-600 mb-4">不小心格式化了 SD 卡，想救回照片和影片</p>
+          <div class="flex items-center justify-between">
+            <span class="text-green-600 font-semibold">救援成功率：85%</span>
+            <span class="text-blue-600">查看方案 →</span>
+          </div>
+        </a>
+
+        <!-- Problem Card 2 -->
+        <a href="/problems/deleted" class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="text-4xl mb-4">🗑️</div>
+          <h3 class="text-xl font-bold mb-2">誤刪檔案</h3>
+          <p class="text-gray-600 mb-4">刪除了重要檔案，想要恢復</p>
+          <div class="flex items-center justify-between">
+            <span class="text-green-600 font-semibold">救援成功率：90%</span>
+            <span class="text-blue-600">查看方案 →</span>
+          </div>
+        </a>
+
+        <!-- Problem Card 3 -->
+        <a href="/problems/corrupted" class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="text-4xl mb-4">⚠️</div>
+          <h3 class="text-xl font-bold mb-2">SD 卡損壞</h3>
+          <p class="text-gray-600 mb-4">顯示「需要格式化」或無法讀取</p>
+          <div class="flex items-center justify-between">
+            <span class="text-yellow-600 font-semibold">救援成功率：60%</span>
+            <span class="text-blue-600">查看方案 →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Scenarios -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">AI 設備專屬解決方案</h2>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        針對 AI 相機、邊緣運算、智能設備的特殊使用情境，提供專門的救援策略
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/ai-scenarios/ai-camera" class="border-2 border-gray-200 p-6 rounded-lg hover:border-blue-500 hover:shadow-lg transition">
+          <div class="text-3xl mb-3">📷</div>
+          <h3 class="text-lg font-bold mb-2">AI 相機 / 智能監控</h3>
+          <p class="text-gray-600 text-sm">長時間錄影、循環覆蓋導致的問題</p>
+        </a>
+
+        <a href="/ai-scenarios/raspberry-pi" class="border-2 border-gray-200 p-6 rounded-lg hover:border-blue-500 hover:shadow-lg transition">
+          <div class="text-3xl mb-3">🖥️</div>
+          <h3 class="text-lg font-bold mb-2">Raspberry Pi / Jetson</h3>
+          <p class="text-gray-600 text-sm">系統映像損壞、檔案系統錯誤</p>
+        </a>
+
+        <a href="/ai-scenarios/dashcam" class="border-2 border-gray-200 p-6 rounded-lg hover:border-blue-500 hover:shadow-lg transition">
+          <div class="text-3xl mb-3">🚗</div>
+          <h3 class="text-lg font-bold mb-2">AI 行車記錄器</h3>
+          <p class="text-gray-600 text-sm">震動環境、緊急錄影檔案救援</p>
+        </a>
+
+        <a href="/ai-scenarios/drone" class="border-2 border-gray-200 p-6 rounded-lg hover:border-blue-500 hover:shadow-lg transition">
+          <div class="text-3xl mb-3">🚁</div>
+          <h3 class="text-lg font-bold mb-2">無人機 / 運動相機</h3>
+          <p class="text-gray-600 text-sm">高速連拍、4K/8K 錄影問題</p>
+        </a>
+
+        <a href="/ai-scenarios/iot" class="border-2 border-gray-200 p-6 rounded-lg hover:border-blue-500 hover:shadow-lg transition">
+          <div class="text-3xl mb-3">🏠</div>
+          <h3 class="text-lg font-bold mb-2">智能家居 / IoT</h3>
+          <p class="text-gray-600 text-sm">24/7 運作、韌體更新問題</p>
+        </a>
+
+        <a href="/ai-scenarios/edge-ai" class="border-2 border-gray-200 p-6 rounded-lg hover:border-blue-500 hover:shadow-lg transition">
+          <div class="text-3xl mb-3">🧠</div>
+          <h3 class="text-lg font-bold mb-2">邊緣 AI 運算</h3>
+          <p class="text-gray-600 text-sm">AI 模型載入、容量優化</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-16 bg-blue-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">救援流程</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-bold mb-2">診斷問題</h3>
+          <p class="text-gray-600 text-sm">使用互動式工具快速判斷問題類型</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-bold mb-2">選擇工具</h3>
+          <p class="text-gray-600 text-sm">根據推薦選擇適合的免費或付費工具</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-bold mb-2">跟隨教學</h3>
+          <p class="text-gray-600 text-sm">依照詳細步驟進行資料救援</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-bold mb-2">預防未來</h3>
+          <p class="text-gray-600 text-sm">學習預防措施避免再次發生</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">立即開始救援你的資料</h2>
+      <p class="text-xl mb-8">免費診斷工具，專業解決方案，幫你找回重要檔案</p>
+      <a href="/diagnose" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 text-lg inline-block">
+        開始診斷 →
+      </a>
+    </div>
+  </section>
+</Layout>

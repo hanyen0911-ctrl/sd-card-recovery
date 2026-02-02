@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- 背景 -->
+  <rect width="100" height="100" fill="#3B82F6" rx="20"/>
+  
+  <!-- SD 卡外形 -->
+  <g transform="translate(20, 15)">
+    <!-- 主體 -->
+    <rect x="0" y="10" width="60" height="70" fill="#FFFFFF" rx="3"/>
+    
+    <!-- SD 卡缺角 -->
+    <polygon points="0,10 15,10 15,0 0,0" fill="#FFFFFF"/>
+    <polygon points="15,10 30,10 30,5 15,5" fill="#E5E7EB"/>
+    
+    <!-- 金屬接點 -->
+    <rect x="5" y="65" width="8" height="10" fill="#9CA3AF" rx="1"/>
+    <rect x="17" y="65" width="8" height="10" fill="#9CA3AF" rx="1"/>
+    <rect x="29" y="65" width="8" height="10" fill="#9CA3AF" rx="1"/>
+    <rect x="41" y="65" width="8" height="10" fill="#9CA3AF" rx="1"/>
+    
+    <!-- 救援符號 (盾牌 + 勾勾) -->
+    <g transform="translate(15, 25)">
+      <!-- 盾牌 -->
+      <path d="M15,0 L30,5 L30,20 Q30,30 15,35 Q0,30 0,20 L0,5 Z" 
+            fill="#10B981" opacity="0.9"/>
+      
+      <!-- 勾勾 -->
+      <path d="M8,17 L13,22 L22,10" 
+            stroke="#FFFFFF" 
+            stroke-width="3" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none"/>
+    </g>
+  </g>
+  
+  <!-- 文字 "SD" -->
+  <text x="50" y="95" 
+        font-family="Arial, sans-serif" 
+        font-size="14" 
+        font-weight="bold" 
+        fill="#FFFFFF" 
+        text-anchor="middle">SD</text>
+</svg>

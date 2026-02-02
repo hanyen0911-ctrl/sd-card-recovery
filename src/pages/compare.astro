@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComparisonTool from '../components/ComparisonTool';
+import cards from '../data/cards.json';
+---
+
+<Layout title="SD 卡比較工具 - 找出最適合你的 SD 卡">
+  <main class="container mx-auto px-4 py-8">
+    <div class="mb-8">
+      <h1 class="text-4xl font-bold mb-4">SD 卡比較工具</h1>
+      <p class="text-gray-600">
+        使用篩選功能快速找到符合需求的 SD 卡，並進行規格比較
+      </p>
+    </div>
+
+    <!-- React 互動組件 -->
+    <ComparisonTool cards={cards} client:load />
+  </main>
+</Layout>

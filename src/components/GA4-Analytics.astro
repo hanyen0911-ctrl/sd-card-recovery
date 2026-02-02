@@ -1,0 +1,44 @@
+---
+// GA4 追蹤組件
+// 使用方式: 在 Layout.astro 的 <head> 中引入
+// <GA4Analytics />
+
+interface Props {
+  measurementId?: string;
+}
+
+const { measurementId = import.meta.env.PUBLIC_GA4_ID } = Astro.props;
+---
+
+{measurementId && (
+  <>
+    <!-- Google tag (gtag.js) -->
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}></script>
+    <script is:inline define:vars={{ measurementId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', measurementId, {
+        // 隱私設定
+        anonymize_ip: true,
+        // 自動追蹤頁面瀏覽
+        send_page_view: true,
+        // 啟用增強型測量功能
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+    </script>
+
+    <!-- 支援 View Transitions (Astro 特有) -->
+    <script>
+      document.addEventListener('astro:page-load', () => {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'page_view', {
+            page_path: window.location.pathname,
+            page_title: document.title
+          });
+        }
+      });
+    </script>
+  </>
+)}

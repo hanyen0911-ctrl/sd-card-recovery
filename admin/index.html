@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>後台管理 - SD卡救援網站</title>
+  
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <!-- 自訂樣式（選用） -->
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- Decap CMS 會在這裡注入管理介面 -->
+  
+  <script>
+    // 自訂 CMS 設定（選用）
+    if (window.CMS) {
+      // 繁體中文化
+      window.CMS.registerLocale('zh_Hant', {
+        auth: {
+          login: '登入',
+          loggingIn: '登入中...',
+          loginWithNetlifyIdentity: '使用 Netlify Identity 登入',
+          loginWithBitbucket: '使用 Bitbucket 登入',
+          loginWithGitHub: '使用 GitHub 登入',
+          loginWithGitLab: '使用 GitLab 登入',
+          errors: {
+            email: '請輸入您的電子郵件',
+            password: '請輸入您的密碼',
+            identitySettings: 'Identity 服務未設定。使用 Git Gateway 時，請確保已啟用 Identity 服務和 Git Gateway。'
+          }
+        },
+        app: {
+          header: {
+            content: '內容',
+            workflow: '工作流程',
+            media: '媒體',
+            quickAdd: '快速新增'
+          },
+          app: {
+            errorHeader: '載入 CMS 設定時發生錯誤',
+            configErrors: '設定錯誤',
+            checkConfigYml: '請檢查您的 config.yml 檔案。',
+            loadingConfig: '載入設定中...',
+            waitingBackend: '等待後端回應...'
+          },
+          notFoundPage: {
+            header: '找不到頁面'
+          }
+        },
+        collection: {
+          sidebar: {
+            collections: '集合',
+            allCollections: '所有集合',
+            searchAll: '搜尋全部'
+          },
+          collectionTop: {
+            sortBy: '排序方式',
+            viewAs: '檢視為',
+            newButton: '新增 %{collectionLabel}',
+            ascending: '升冪',
+            descending: '降冪',
+            searchResults: '搜尋 "%{searchTerm}" 的結果',
+            searchResultsInCollection: '搜尋 %{collection} 中 "%{searchTerm}" 的結果',
+            filterBy: '篩選條件',
+            groupBy: '分組'
+          },
+          entries: {
+            loadingEntries: '載入項目中...',
+            cachingEntries: '快取項目中...',
+            longerLoading: '這可能需要幾分鐘',
+            noEntries: '沒有項目'
+          }
+        },
+        editor: {
+          editorControl: {
+            field: {
+              optional: '選用'
+            }
+          },
+          editorControlPane: {
+            widget: {
+              required: '%{fieldLabel} 為必填欄位。',
+              regexPattern: '%{fieldLabel} 不符合格式：%{pattern}。',
+              processing: '%{fieldLabel} 處理中。',
+              range: '%{fieldLabel} 必須介於 %{minValue} 和 %{maxValue} 之間。',
+              min: '%{fieldLabel} 必須至少為 %{minValue}。',
+              max: '%{fieldLabel} 必須為 %{maxValue} 或更少。',
+              rangeCount: '%{fieldLabel} 必須有 %{minCount} 到 %{maxCount} 個項目。',
+              rangeCountExact: '%{fieldLabel} 必須剛好有 %{count} 個項目。',
+              rangeMin: '%{fieldLabel} 必須至少有 %{minCount} 個項目。',
+              rangeMax: '%{fieldLabel} 最多只能有 %{maxCount} 個項目。',
+              invalidPath: '"%{path}" 不是有效的路徑',
+              pathExists: '路徑 "%{path}" 已存在'
+            }
+          },
+          editor: {
+            onLeavePage: '您確定要離開此頁面嗎？',
+            onUpdatingWithUnsavedChanges: '您有未儲存的變更，請先儲存再更新狀態。',
+            onPublishingNotReady: '請在發布前將狀態更新為「就緒」。',
+            onPublishingWithUnsavedChanges: '您有未儲存的變更，請先儲存再發布。',
+            onPublishing: '您確定要發布此項目嗎？',
+            onUnpublishing: '您確定要取消發布此項目嗎？',
+            onDeleteWithUnsavedChanges: '您確定要刪除此已發布的項目，以及目前工作階段中未儲存的變更嗎？',
+            onDeletePublishedEntry: '您確定要刪除此已發布的項目嗎？',
+            onDeleteUnpublishedChangesWithUnsavedChanges: '這將刪除此項目的所有未發布變更，以及目前工作階段中未儲存的變更。您仍要刪除嗎？',
+            onDeleteUnpublishedChanges: '此項目的所有未發布變更都將被刪除。您仍要刪除嗎？',
+            loadingEntry: '載入項目中...',
+            confirmLoadBackup: '已復原此項目的本機備份，您要使用它嗎？'
+          },
+          editorInterface: {
+            toggleI18n: '切換 i18n',
+            togglePreview: '切換預覽',
+            toggleScrollSync: '同步捲動'
+          },
+          editorToolbar: {
+            publishing: '發布中...',
+            publish: '發布',
+            published: '已發布',
+            unpublish: '取消發布',
+            duplicate: '複製',
+            unpublishing: '取消發布中...',
+            publishAndCreateNew: '發布並建立新項目',
+            publishAndDuplicate: '發布並複製',
+            deleteUnpublishedChanges: '刪除未發布的變更',
+            deleteUnpublishedEntry: '刪除未發布的項目',
+            deletePublishedEntry: '刪除已發布的項目',
+            deleteEntry: '刪除項目',
+            saving: '儲存中...',
+            save: '儲存',
+            statusInfoTooltipDraft: '項目狀態設為草稿。若要完成並提交審核，請將狀態設為「待審核」',
+            statusInfoTooltipInReview: '項目正在審核中，無需進一步動作。不過您仍可進行其他編輯。',
+            deleting: '刪除中...',
+            updating: '更新中...',
+            status: '狀態：%{status}',
+            backCollection: '編輯 %{collectionLabel}',
+            unsavedChanges: '未儲存的變更',
+            changesSaved: '變更已儲存',
+            draft: '草稿',
+            inReview: '待審核',
+            ready: '就緒',
+            publishNow: '立即發布',
+            deployPreviewPendingButtonLabel: '檢查預覽',
+            deployPreviewButtonLabel: '檢視預覽',
+            deployButtonLabel: '檢視上線版本'
+          },
+          editorWidgets: {
+            markdown: {
+              bold: '粗體',
+              italic: '斜體',
+              code: '程式碼',
+              link: '連結',
+              linkPrompt: '輸入連結 URL',
+              headings: '標題',
+              quote: '引用',
+              bulletedList: '項目符號清單',
+              numberedList: '編號清單',
+              addComponent: '新增元件',
+              richText: '富文本',
+              markdown: 'Markdown'
+            },
+            image: {
+              choose: '選擇圖片',
+              chooseUrl: '從 URL 插入',
+              replaceUrl: '使用 URL 取代',
+              promptUrl: '輸入圖片的 URL',
+              chooseDifferent: '選擇不同的圖片',
+              remove: '移除圖片'
+            },
+            file: {
+              choose: '選擇檔案',
+              chooseUrl: '從 URL 插入',
+              replaceUrl: '使用 URL 取代',
+              promptUrl: '輸入檔案的 URL',
+              chooseDifferent: '選擇不同的檔案',
+              remove: '移除檔案'
+            },
+            unknownControl: {
+              noControl: "沒有控制項用於 widget '%{widget}'。"
+            },
+            unknownPreview: {
+              noPreview: "沒有預覽用於 widget '%{widget}'。"
+            },
+            headingOptions: {
+              headingOne: '標題 1',
+              headingTwo: '標題 2',
+              headingThree: '標題 3',
+              headingFour: '標題 4',
+              headingFive: '標題 5',
+              headingSix: '標題 6'
+            },
+            datetime: {
+              now: '現在'
+            },
+            list: {
+              add: '新增 %{item}',
+              addType: '新增 %{item} 類型'
+            }
+          }
+        },
+        mediaLibrary: {
+          mediaLibraryCard: {
+            draft: '草稿'
+          },
+          mediaLibrary: {
+            onDelete: '您確定要刪除選取的媒體嗎？',
+            fileTooLarge: '檔案太大。\n設定不允許大於 %{size} KB 的檔案。'
+          },
+          mediaLibraryModal: {
+            loading: '載入中...',
+            noResults: '沒有結果。',
+            noAssetsFound: '找不到資產。',
+            noImagesFound: '找不到圖片。',
+            private: '私人',
+            images: '圖片',
+            mediaAssets: '媒體資產',
+            search: '搜尋...',
+            uploading: '上傳中...',
+            upload: '上傳新項目',
+            download: '下載',
+            deleting: '刪除中...',
+            deleteSelected: '刪除選取項目',
+            chooseSelected: '選擇選取項目'
+          }
+        },
+        ui: {
+          default: {
+            goBackToSite: '返回網站'
+          },
+          errorBoundary: {
+            title: '錯誤',
+            details: '發生錯誤 - 請',
+            reportIt: '回報問題。',
+            detailsHeading: '詳細資訊',
+            privacyWarning: '開啟問題將自動填入錯誤訊息和除錯資料。\n請確認資訊正確，如有敏感資料請移除。',
+            recoveredEntry: {
+              heading: '已復原的文件',
+              warning: '在離開前請先複製/貼上此內容到其他地方！',
+              copyButtonLabel: '複製到剪貼簿'
+            }
+          },
+          settingsDropdown: {
+            logOut: '登出'
+          },
+          toast: {
+            onFailToLoadEntries: '載入項目失敗：%{details}',
+            onFailToLoadDeployPreview: '載入預覽失敗：%{details}',
+            onFailToPersist: '保存項目失敗：%{details}',
+            onFailToDelete: '刪除項目失敗：%{details}',
+            onFailToUpdateStatus: '更新狀態失敗：%{details}',
+            missingRequiredField: '糟糕，您遺漏了必填欄位。請在儲存前完成填寫。',
+            entrySaved: '項目已儲存',
+            entryPublished: '項目已發布',
+            entryUnpublished: '項目已取消發布',
+            onFailToPublishEntry: '發布失敗：%{details}',
+            onFailToUnpublishEntry: '取消發布項目失敗：%{details}',
+            entryUpdated: '項目狀態已更新',
+            onDeleteUnpublishedChanges: '已刪除未發布的變更',
+            onFailToAuth: '%{details}',
+            onLoggedOut: '您已登出，請備份所有資料並重新登入',
+            onBackendDown: '後端服務中斷。請參閱 %{details} 以獲取更多資訊'
+          }
+        },
+        workflow: {
+          workflow: {
+            loading: '載入編輯工作流程項目',
+            workflowHeading: '編輯工作流程',
+            newPost: '新文章',
+            description: '%{smart_count} 個項目等待審核，%{readyCount} 個已就緒。',
+            dateFormat: 'MMMM D'
+          },
+          workflowCard: {
+            lastChange: '%{date} 由 %{author}',
+            lastChangeNoAuthor: '%{date}',
+            lastChangeNoDate: '由 %{author}',
+            deleteChanges: '刪除變更',
+            deleteNewEntry: '刪除新項目',
+            publishChanges: '發布變更',
+            publishNewEntry: '發布新項目'
+          },
+          workflowList: {
+            onDeleteEntry: '您確定要刪除此項目嗎？',
+            onPublishingNotReadyEntry: '只有狀態為「就緒」的項目才能發布。請將卡片拖曳到「就緒」欄位以啟用發布。',
+            onPublishEntry: '您確定要發布此項目嗎？',
+            draftHeader: '草稿',
+            inReviewHeader: '待審核',
+            readyHeader: '就緒',
+            currentEntries: '%{smart_count} 個項目'
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

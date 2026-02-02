@@ -1,0 +1,82 @@
+# Decap CMS 設定檔
+# 這個檔案控制你的後台行為
+
+backend:
+  name: git-gateway
+  branch: main # 你的主要分支名稱
+
+# 本地開發模式（測試用）
+# local_backend: true
+
+# 媒體檔案設定
+media_folder: "public/images/uploads" # 上傳的圖片會存到這裡
+public_folder: "/images/uploads" # 網站上的圖片路徑
+
+# 繁體中文介面
+locale: "zh_Hant"
+
+# 文章集合設定
+collections:
+  # 教學文章
+  - name: "guides"
+    label: "教學文章"
+    label_singular: "文章"
+    folder: "src/content/guides"
+    create: true # 允許建立新文章
+    slug: "{{slug}}" # 文件名稱格式
+    fields:
+      - { label: "標題", name: "title", widget: "string", hint: "文章標題（SEO 重要）" }
+      - { label: "描述", name: "description", widget: "text", hint: "150-160 字的摘要（會顯示在 Google 搜尋）" }
+      - { label: "發布日期", name: "pubDate", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "作者", name: "author", widget: "string", default: "SD卡救援專家" }
+      - { label: "分類", name: "category", widget: "select", options: ["相機記憶卡救援", "手機SD卡救援", "電腦SD卡問題", "SD卡格式化", "其他"] }
+      - { label: "標籤", name: "tags", widget: "list", hint: "用於 SEO 和相關文章推薦" }
+      - { label: "封面圖", name: "heroImage", widget: "image", required: false, hint: "建議尺寸：1200x630px" }
+      - { label: "內文", name: "body", widget: "markdown", hint: "使用 Markdown 格式編寫" }
+      
+  # 常見問題頁面
+  - name: "faq"
+    label: "常見問題"
+    label_singular: "問題"
+    folder: "src/content/faq"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "問題", name: "question", widget: "string" }
+      - { label: "分類", name: "category", widget: "select", options: ["一般問題", "技術問題", "工具使用", "收費相關"] }
+      - { label: "答案", name: "body", widget: "markdown" }
+      - { label: "排序", name: "order", widget: "number", default: 0, hint: "數字越小越前面" }
+
+  # 工具評測
+  - name: "tools"
+    label: "工具評測"
+    label_singular: "工具"
+    folder: "src/content/tools"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "工具名稱", name: "title", widget: "string" }
+      - { label: "簡短描述", name: "description", widget: "text" }
+      - { label: "工具類型", name: "category", widget: "select", options: ["免費工具", "付費工具", "線上工具", "專業軟體"] }
+      - { label: "評分", name: "rating", widget: "number", min: 1, max: 5, step: 0.5, default: 4.0 }
+      - { label: "價格", name: "price", widget: "string", hint: "例如：免費 / $29.95 / $0-99" }
+      - { label: "官網連結", name: "website", widget: "string", required: false }
+      - { label: "優點", name: "pros", widget: "list" }
+      - { label: "缺點", name: "cons", widget: "list" }
+      - { label: "詳細介紹", name: "body", widget: "markdown" }
+      - { label: "封面圖", name: "image", widget: "image", required: false }
+
+  # 網站設定頁面
+  - name: "settings"
+    label: "網站設定"
+    files:
+      - label: "一般設定"
+        name: "general"
+        file: "src/config/site.json"
+        fields:
+          - { label: "網站名稱", name: "siteName", widget: "string" }
+          - { label: "網站描述", name: "siteDescription", widget: "text" }
+          - { label: "網站網址", name: "siteUrl", widget: "string", hint: "例如：https://your-domain.com" }
+          - { label: "聯絡信箱", name: "contactEmail", widget: "string" }
+          - { label: "Google Analytics ID", name: "gaId", widget: "string", required: false, hint: "例如：G-XXXXXXXXXX" }
+          - { label: "Google Search Console 驗證碼", name: "gscVerification", widget: "string", required: false }

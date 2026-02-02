@@ -1,0 +1,351 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="AI 相機 SD 卡救援"
+  description="專為 AI 相機與智能監控設備設計的 SD 卡資料救援指南，解決長時間錄影、循環覆蓋等問題"
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <div class="text-5xl mb-4">📷</div>
+        <h1 class="text-4xl font-bold mb-4">AI 相機 / 智能監控 SD 卡救援</h1>
+        <p class="text-xl">
+          長時間錄影、AI 運算、循環覆蓋導致的 SD 卡問題專門解決方案
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why AI Cameras Have SD Card Problems -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-8">為什麼 AI 相機容易出現 SD 卡問題？</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-red-50 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">🔥 高頻率寫入</h3>
+          <p class="text-gray-700">24/7 連續錄影產生大量小檔案，加速 SD 卡磨損</p>
+        </div>
+
+        <div class="bg-orange-50 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">🔄 循環覆蓋機制</h3>
+          <p class="text-gray-700">自動刪除舊檔案並寫入新檔案，增加檔案系統錯誤風險</p>
+        </div>
+
+        <div class="bg-yellow-50 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">🧠 AI 運算壓力</h3>
+          <p class="text-gray-700">邊緣 AI 運算同時進行讀寫操作，容易造成卡片過熱</p>
+        </div>
+
+        <div class="bg-blue-50 p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-3">⚡ 突然斷電</h3>
+          <p class="text-gray-700">停電或設備故障時未正確卸載，導致檔案損壞</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Symptoms -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-8">常見症狀診斷</h2>
+
+      <!-- Symptom 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-bold mb-2">症狀 1：「SD 卡需要格式化」錯誤</h3>
+            <p class="text-gray-600">相機或電腦顯示「磁碟未格式化，是否要格式化？」</p>
+          </div>
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap ml-4">
+            中度嚴重
+          </span>
+        </div>
+        
+        <div class="border-l-4 border-blue-500 pl-4 mb-4">
+          <p class="font-semibold mb-2">可能原因：</p>
+          <ul class="text-gray-700 space-y-1">
+            <li>• 檔案系統表損壞（FAT32/exFAT）</li>
+            <li>• 錄影中突然斷電</li>
+            <li>• SD 卡壽命到期導致壞塊</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded mb-4">
+          <p class="font-semibold mb-2">救援成功率：⭐⭐⭐⭐ (85%)</p>
+        </div>
+
+        <div class="bg-red-50 p-4 rounded mb-4">
+          <p class="font-bold mb-2">❌ 立即行動（錯誤做法）：</p>
+          <ul class="text-gray-700 space-y-1">
+            <li>• <strong>不要點擊「格式化」</strong></li>
+            <li>• 不要繼續使用該 SD 卡</li>
+            <li>• 不要執行 CHKDSK（可能破壞資料）</li>
+          </ul>
+        </div>
+
+        <div class="bg-blue-50 p-4 rounded mb-4">
+          <p class="font-bold mb-2">✅ 正確做法：</p>
+          <ol class="text-gray-700 space-y-2">
+            <li>1. 立即停止使用該卡片並妥善保管</li>
+            <li>2. 使用 TestDisk 嘗試修復檔案系統</li>
+            <li>3. 若無法修復，使用 PhotoRec 深度掃描救援</li>
+          </ol>
+        </div>
+
+        <a href="/tutorials/filesystem-repair" class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+          查看詳細教學 →
+        </a>
+      </div>
+
+      <!-- Symptom 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-bold mb-2">症狀 2：影片檔案無法播放</h3>
+            <p class="text-gray-600">錄影檔案存在但無法開啟或播放到一半卡住</p>
+          </div>
+          <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap ml-4">
+            中度嚴重
+          </span>
+        </div>
+        
+        <div class="border-l-4 border-purple-500 pl-4 mb-4">
+          <p class="font-semibold mb-2">可能原因：</p>
+          <ul class="text-gray-700 space-y-1">
+            <li>• 錄影中斷導致索引未正確寫入</li>
+            <li>• 檔案頭部資訊損壞</li>
+            <li>• 循環覆蓋時產生碎片檔案</li>
+          </ul>
+        </div>
+
+        <div class="bg-green-50 p-4 rounded mb-4">
+          <p class="font-semibold mb-2">救援成功率：⭐⭐⭐ (70%)</p>
+          <p class="text-sm text-gray-600">部分影片可能無法完全修復，但通常能救回大部分內容</p>
+        </div>
+
+        <div class="bg-blue-50 p-4 rounded">
+          <p class="font-bold mb-2">專用工具：</p>
+          <ul class="text-gray-700 space-y-2">
+            <li>• <strong>VLC Media Player</strong> (免費) - 嘗試播放並修復</li>
+            <li>• <strong>FFmpeg</strong> (免費) - 重建影片索引</li>
+            <li>• <strong>Stellar Video Repair</strong> (付費) - 專業影片修復</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Symptom 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+            <h3 class="text-xl font-bold mb-2">症狀 3：SD 卡速度變慢或頻繁斷線</h3>
+            <p class="text-gray-600">錄影時出現卡頓，或相機顯示「SD 卡錯誤」</p>
+          </div>
+          <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap ml-4">
+            高度警告
+          </span>
+        </div>
+        
+        <div class="border-l-4 border-red-500 pl-4 mb-4">
+          <p class="font-semibold mb-2 text-red-700">⚠️ 這是 SD 卡即將損壞的警訊！</p>
+          <ul class="text-gray-700 space-y-1">
+            <li>• SD 卡達到寫入壽命上限</li>
+            <li>• 壞塊數量增加</li>
+            <li>• 控制器故障</li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-50 p-4 rounded">
+          <p class="font-bold mb-2">緊急措施：</p>
+          <ol class="text-gray-700 space-y-2">
+            <li>1. <strong>立即備份所有可讀取的資料</strong></li>
+            <li>2. 停止使用該 SD 卡</li>
+            <li>3. 更換新的 High Endurance SD 卡</li>
+            <li>4. 檢討是否使用了不適合的卡片等級</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-8">AI 相機專屬解決方案</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Free Tools -->
+        <div class="border-2 border-gray-200 p-6 rounded-lg">
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm mr-2">免費</span>
+            開源工具
+          </h3>
+          
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold mb-1">PhotoRec</h4>
+              <p class="text-sm text-gray-600 mb-2">深度掃描救援，支援 300+ 檔案格式</p>
+              <p class="text-xs text-gray-500">✓ Windows / macOS / Linux</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-1">TestDisk</h4>
+              <p class="text-sm text-gray-600 mb-2">修復檔案系統表，恢復分區</p>
+              <p class="text-xs text-gray-500">✓ Windows / macOS / Linux</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-1">VLC + FFmpeg</h4>
+              <p class="text-sm text-gray-600 mb-2">修復損壞的影片檔案</p>
+              <p class="text-xs text-gray-500">✓ 所有平台</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Paid Tools -->
+        <div class="border-2 border-blue-200 p-6 rounded-lg bg-blue-50">
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm mr-2">付費</span>
+            專業軟體
+          </h3>
+          
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold mb-1">EaseUS Data Recovery Wizard</h4>
+              <p class="text-sm text-gray-600 mb-2">圖形化介面，簡單易用，影片修復功能</p>
+              <p class="text-xs text-gray-500">✓ Windows / macOS</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-1">Stellar Photo/Video Recovery</h4>
+              <p class="text-sm text-gray-600 mb-2">專為相機設計，支援 RAW 格式</p>
+              <p class="text-xs text-gray-500">✓ Windows / macOS</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold mb-1">R-Studio</h4>
+              <p class="text-sm text-gray-600 mb-2">專業級救援，RAID 支援</p>
+              <p class="text-xs text-gray-500">✓ Windows / macOS / Linux</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prevention -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-8">預防措施</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-4">✅ 選用正確的 SD 卡</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• <strong>High Endurance</strong> 系列（監控專用）</li>
+            <li>• <strong>至少 U3 + V30 + A1</strong> 等級</li>
+            <li>• 容量建議：64GB - 128GB</li>
+            <li>• 品牌：SanDisk High Endurance, Samsung PRO Endurance</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-4">✅ 定期維護</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• 每 <strong>2-3 個月</strong>重新格式化一次</li>
+            <li>• 定期檢查 SD 卡健康狀態</li>
+            <li>• 重要影片即時備份到雲端或 NAS</li>
+            <li>• 使用 UPS 避免突然斷電</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-4">✅ 設定優化</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• 調整循環錄影時長（避免過短）</li>
+            <li>• 降低錄影品質（如果不需要 4K）</li>
+            <li>• 啟用動態偵測錄影（減少寫入）</li>
+            <li>• 關閉不必要的 AI 功能</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg">
+          <h3 class="font-bold text-lg mb-4">✅ 更換週期</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• 24/7 錄影：<strong>每 1-2 年</strong>更換</li>
+            <li>• 偶爾使用：<strong>每 3-5 年</strong>更換</li>
+            <li>• 出現異常時立即更換</li>
+            <li>• 不要等到完全損壞才換</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommended SD Cards -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-8">推薦 SD 卡規格</h2>
+
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border p-3 text-left">使用情境</th>
+              <th class="border p-3 text-left">最低規格</th>
+              <th class="border p-3 text-left">建議規格</th>
+              <th class="border p-3 text-left">推薦品牌</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border p-3">1080p 智能監控</td>
+              <td class="border p-3">Class 10, U1, 32GB</td>
+              <td class="border p-3">U3, V30, A1, 64GB, High Endurance</td>
+              <td class="border p-3">SanDisk High Endurance</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border p-3">4K AI 相機</td>
+              <td class="border p-3">U3, V30, 64GB</td>
+              <td class="border p-3">V30, A2, 128GB, High Endurance</td>
+              <td class="border p-3">Samsung PRO Endurance</td>
+            </tr>
+            <tr>
+              <td class="border p-3">行車記錄器</td>
+              <td class="border p-3">Class 10, 32GB</td>
+              <td class="border p-3">U3, V30, 64GB, High Endurance</td>
+              <td class="border p-3">SanDisk High Endurance</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="border p-3">智能門鈴</td>
+              <td class="border p-3">Class 10, 32GB</td>
+              <td class="border p-3">U1, A1, 64GB, High Endurance</td>
+              <td class="border p-3">Lexar High Endurance</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-6 bg-blue-50 p-4 rounded-lg">
+        <p class="text-sm text-gray-700">
+          <strong>💡 提示：</strong>High Endurance 系列 SD 卡專為長時間錄影設計，寫入壽命是一般 SD 卡的 10-20 倍，
+          雖然價格稍高，但能大幅減少故障機率。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">遇到 AI 相機 SD 卡問題？</h2>
+      <p class="text-xl mb-8">使用診斷工具快速找出解決方案</p>
+      <a href="/diagnose" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 text-lg inline-block">
+        立即診斷 →
+      </a>
+    </div>
+  </section>
+</Layout>

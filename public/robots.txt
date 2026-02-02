@@ -1,0 +1,22 @@
+# robots.txt - SD Card Recovery Website
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sd-card-recovery.vercel.app/sitemap.xml
+
+# Common paths to crawl
+Allow: /guides/
+Allow: /problems/
+Allow: /ai-scenarios/
+Allow: /diagnose
+Allow: /compare
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+
+# Crawl delay (optional, 1 second)
+Crawl-delay: 1

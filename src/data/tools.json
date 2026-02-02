@@ -1,0 +1,203 @@
+[
+  {
+    "id": "photorec",
+    "name": "PhotoRec",
+    "type": "free",
+    "developer": "CGSecurity",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "specialties": ["深度掃描", "支援 300+ 檔案格式", "格式化救援"],
+    "pros": [
+      "完全免費開源",
+      "功能強大，救援率高",
+      "跨平台支援",
+      "不需安裝，可從 USB 執行"
+    ],
+    "cons": [
+      "命令列介面，不友善",
+      "需要技術知識",
+      "無法保留檔名和資料夾結構",
+      "學習曲線陡峭"
+    ],
+    "bestFor": ["格式化救援", "深度掃描", "進階用戶", "大量檔案救援"],
+    "successRate": 85,
+    "difficulty": "中等",
+    "downloadUrl": "https://www.cgsecurity.org/wiki/PhotoRec",
+    "rating": 4.5,
+    "tutorialLink": "/tutorials/photorec-guide"
+  },
+  {
+    "id": "testdisk",
+    "name": "TestDisk",
+    "type": "free",
+    "developer": "CGSecurity",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "specialties": ["檔案系統修復", "分區恢復", "開機磁區修復"],
+    "pros": [
+      "完全免費開源",
+      "可修復檔案系統而不刪除資料",
+      "支援多種檔案系統（FAT, NTFS, exFAT, ext4）",
+      "與 PhotoRec 搭配使用效果好"
+    ],
+    "cons": [
+      "命令列介面",
+      "操作複雜，容易出錯",
+      "需要了解檔案系統概念"
+    ],
+    "bestFor": ["檔案系統損壞", "分區表錯誤", "RAW 格式修復"],
+    "successRate": 80,
+    "difficulty": "困難",
+    "downloadUrl": "https://www.cgsecurity.org/wiki/TestDisk",
+    "rating": 4.3,
+    "tutorialLink": "/tutorials/testdisk-guide"
+  },
+  {
+    "id": "recuva",
+    "name": "Recuva",
+    "type": "freemium",
+    "developer": "Piriform (CCleaner)",
+    "platforms": ["Windows"],
+    "specialties": ["圖形化介面", "快速掃描", "檔案預覽"],
+    "pros": [
+      "介面友善，易於使用",
+      "免費版功能已足夠一般使用",
+      "可預覽檔案再決定救援",
+      "支援多種儲存裝置"
+    ],
+    "cons": [
+      "僅支援 Windows",
+      "深度掃描需付費（Pro 版）",
+      "救援率略低於 PhotoRec",
+      "免費版有廣告"
+    ],
+    "bestFor": ["誤刪恢復", "Windows 用戶", "初學者", "快速救援"],
+    "successRate": 75,
+    "difficulty": "簡單",
+    "downloadUrl": "https://www.ccleaner.com/recuva",
+    "rating": 4.2,
+    "tutorialLink": "/tutorials/recuva-guide"
+  },
+  {
+    "id": "easeus",
+    "name": "EaseUS Data Recovery Wizard",
+    "type": "freemium",
+    "developer": "EaseUS",
+    "platforms": ["Windows", "macOS"],
+    "specialties": ["一鍵救援", "影片修復", "圖形化介面"],
+    "pros": [
+      "介面非常友善",
+      "支援影片檔案修復",
+      "免費版可救援 2GB",
+      "掃描速度快",
+      "中文介面"
+    ],
+    "cons": [
+      "免費版限制 2GB",
+      "完整版價格較高（約 NT$2000-3000）",
+      "部分功能需付費解鎖"
+    ],
+    "bestFor": ["所有問題類型", "初學者", "需要中文介面", "影片救援"],
+    "successRate": 85,
+    "difficulty": "簡單",
+    "downloadUrl": "https://www.easeus.com/",
+    "rating": 4.4,
+    "tutorialLink": "/tutorials/easeus-guide"
+  },
+  {
+    "id": "disk-drill",
+    "name": "Disk Drill",
+    "type": "freemium",
+    "developer": "CleverFiles",
+    "platforms": ["macOS", "Windows"],
+    "specialties": ["macOS 友善", "即時監控", "備份功能"],
+    "pros": [
+      "macOS 使用者首選",
+      "介面設計優秀",
+      "免費版可救援 500MB",
+      "附加磁碟健康監控功能"
+    ],
+    "cons": [
+      "免費版限制較多",
+      "完整版價格高（約 $89 美元）",
+      "掃描速度較慢"
+    ],
+    "bestFor": ["macOS 用戶", "需要監控功能", "重視介面設計"],
+    "successRate": 82,
+    "difficulty": "簡單",
+    "downloadUrl": "https://www.cleverfiles.com/",
+    "rating": 4.3,
+    "tutorialLink": "/tutorials/disk-drill-guide"
+  },
+  {
+    "id": "stellar-photo",
+    "name": "Stellar Photo Recovery",
+    "type": "paid",
+    "developer": "Stellar",
+    "platforms": ["Windows", "macOS"],
+    "specialties": ["相機專用", "RAW 格式", "照片修復"],
+    "pros": [
+      "專為相機設計",
+      "支援所有主流相機 RAW 格式",
+      "可修復損壞的照片",
+      "救援率高"
+    ],
+    "cons": [
+      "僅試用版，完整版需付費（約 $49.99）",
+      "功能專注在照片，不適合其他檔案"
+    ],
+    "bestFor": ["攝影師", "AI 相機用戶", "RAW 格式救援"],
+    "successRate": 88,
+    "difficulty": "簡單",
+    "downloadUrl": "https://www.stellarinfo.com/",
+    "rating": 4.5,
+    "tutorialLink": "/tutorials/stellar-photo-guide"
+  },
+  {
+    "id": "r-studio",
+    "name": "R-Studio",
+    "type": "paid",
+    "developer": "R-Tools Technology",
+    "platforms": ["Windows", "macOS", "Linux"],
+    "specialties": ["專業級", "RAID 支援", "網路救援"],
+    "pros": [
+      "專業級功能最完整",
+      "支援 RAID 陣列救援",
+      "可遠端救援",
+      "救援成功率極高"
+    ],
+    "cons": [
+      "價格昂貴（約 $79.99）",
+      "介面複雜，需要專業知識",
+      "不適合一般用戶"
+    ],
+    "bestFor": ["專業用戶", "企業級救援", "RAID 陣列", "複雜問題"],
+    "successRate": 90,
+    "difficulty": "困難",
+    "downloadUrl": "https://www.r-studio.com/",
+    "rating": 4.6,
+    "tutorialLink": "/tutorials/r-studio-guide"
+  },
+  {
+    "id": "vlc",
+    "name": "VLC Media Player",
+    "type": "free",
+    "developer": "VideoLAN",
+    "platforms": ["Windows", "macOS", "Linux", "Android", "iOS"],
+    "specialties": ["影片修復", "格式轉換", "播放所有格式"],
+    "pros": [
+      "完全免費開源",
+      "可播放並修復損壞影片",
+      "支援所有影片格式",
+      "跨平台"
+    ],
+    "cons": [
+      "主要是播放器，修復功能有限",
+      "無法處理嚴重損壞的檔案"
+    ],
+    "bestFor": ["影片檔案修復", "輕度損壞", "格式轉換"],
+    "successRate": 60,
+    "difficulty": "簡單",
+    "downloadUrl": "https://www.videolan.org/",
+    "rating": 4.7,
+    "tutorialLink": "/tutorials/vlc-video-repair"
+  }
+]

@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DiagnoseTool from '../components/DiagnoseTool';
+---
+
+<Layout title="問題診斷" description="使用互動式工具快速診斷 SD 卡問題，獲得專業的解決方案推薦">
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">SD 卡問題診斷工具</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          回答幾個簡單問題，我們會為你分析問題並推薦最適合的解決方案
+        </p>
+      </div>
+
+      <DiagnoseTool client:load />
+
+      <div class="mt-16 max-w-4xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6 text-center">診斷工具如何運作？</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg text-center">
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="font-bold mb-2">精準分析</h3>
+            <p class="text-gray-600 text-sm">根據你的回答，判斷問題類型和嚴重程度</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg text-center">
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="font-bold mb-2">成功率預估</h3>
+            <p class="text-gray-600 text-sm">基於數千個案例，提供救援成功率參考</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg text-center">
+            <div class="text-4xl mb-4">🛠️</div>
+            <h3 class="font-bold mb-2">工具推薦</h3>
+            <p class="text-gray-600 text-sm">推薦最適合的免費或付費救援工具</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

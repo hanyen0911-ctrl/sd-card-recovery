@@ -1,0 +1,82 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'SD 卡資料救援完整指南 - 格式化恢復、誤刪救援、損壞修復解決方案' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} | SD 卡救援中心</title>
+  <meta name="description" content={description}>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body class="bg-gray-50">
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold text-blue-600">
+          🛡️ SD 卡救援中心
+        </a>
+        <div class="hidden md:flex space-x-6">
+          <a href="/diagnose" class="text-gray-700 hover:text-blue-600">快速診斷</a>
+          <a href="/problems" class="text-gray-700 hover:text-blue-600">問題類型</a>
+          <a href="/ai-scenarios" class="text-gray-700 hover:text-blue-600">AI 場景</a>
+          <a href="/tools" class="text-gray-700 hover:text-blue-600">工具推薦</a>
+          <a href="/tutorials" class="text-gray-700 hover:text-blue-600">教學文章</a>
+        </div>
+        <a href="/diagnose" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+          立即診斷
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="bg-gray-800 text-white mt-20">
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="font-bold text-lg mb-4">SD 卡救援中心</h3>
+          <p class="text-gray-400">專業的 SD 卡資料救援解決方案</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">常見問題</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/problems/formatted" class="hover:text-white">格式化救援</a></li>
+            <li><a href="/problems/deleted" class="hover:text-white">誤刪恢復</a></li>
+            <li><a href="/problems/corrupted" class="hover:text-white">損壞修復</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">AI 場景</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/ai-scenarios/ai-camera" class="hover:text-white">AI 相機</a></li>
+            <li><a href="/ai-scenarios/raspberry-pi" class="hover:text-white">Raspberry Pi</a></li>
+            <li><a href="/ai-scenarios/dashcam" class="hover:text-white">行車記錄器</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">資源</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="/tools" class="hover:text-white">工具推薦</a></li>
+            <li><a href="/tutorials" class="hover:text-white">教學文章</a></li>
+            <li><a href="/knowledge/faq" class="hover:text-white">常見問題</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2026 SD 卡救援中心. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

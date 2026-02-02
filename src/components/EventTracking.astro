@@ -1,0 +1,115 @@
+---
+// 自訂事件追蹤組件
+// 用於追蹤用戶行為：點擊工具下載、查看步驟、提交診斷等
+---
+
+<script>
+  // 追蹤工具下載點擊
+  export function trackToolDownload(toolName: string, toolType: 'free' | 'paid') {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'tool_download_click', {
+        event_category: 'engagement',
+        event_label: toolName,
+        tool_type: toolType,
+        value: toolType === 'paid' ? 1 : 0
+      });
+    }
+  }
+
+  // 追蹤診斷工具使用
+  export function trackDiagnosisStep(step: number, problem: string) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'diagnosis_step', {
+        event_category: 'tool_usage',
+        event_label: problem,
+        step_number: step
+      });
+    }
+  }
+
+  // 追蹤解決方案查看
+  export function trackSolutionView(solutionType: string, scrollDepth: number) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'solution_view', {
+        event_category: 'content_engagement',
+        event_label: solutionType,
+        scroll_depth: scrollDepth
+      });
+    }
+  }
+
+  // 追蹤外部連結點擊
+  export function trackOutboundLink(url: string, linkText: string) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'click', {
+        event_category: 'outbound',
+        event_label: url,
+        link_text: linkText,
+        transport_type: 'beacon'
+      });
+    }
+  }
+
+  // 追蹤影片播放
+  export function trackVideoPlay(videoTitle: string, platform: string) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'video_play', {
+        event_category: 'video',
+        event_label: videoTitle,
+        platform: platform
+      });
+    }
+  }
+
+  // 追蹤搜尋行為（如果有站內搜尋）
+  export function trackSearch(searchTerm: string, resultsCount: number) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'search', {
+        search_term: searchTerm,
+        results_count: resultsCount
+      });
+    }
+  }
+
+  // 追蹤頁面停留時間（自動）
+  let startTime = Date.now();
+  
+  window.addEventListener('beforeunload', () => {
+    const timeSpent = Math.round((Date.now() - startTime) / 1000);
+    if (typeof gtag !== 'undefined' && timeSpent > 5) {
+      gtag('event', 'time_on_page', {
+        event_category: 'engagement',
+        value: timeSpent,
+        page_path: window.location.pathname
+      });
+    }
+  });
+
+  // 追蹤滾動深度
+  let maxScroll = 0;
+  let scrollTracked = false;
+
+  function trackScrollDepth() {
+    const scrollPercentage = Math.round(
+      (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+    );
+    
+    if (scrollPercentage > maxScroll) {
+      maxScroll = scrollPercentage;
+    }
+
+    // 追蹤 25%, 50%, 75%, 90% 里程碑
+    if (!scrollTracked && maxScroll >= 90) {
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'scroll_depth', {
+          event_category: 'engagement',
+          event_label: '90%',
+          page_path: window.location.pathname
+        });
+      }
+      scrollTracked = true;
+    }
+  }
+
+  window.addEventListener('scroll', trackScrollDepth, { passive: true });
+</script>

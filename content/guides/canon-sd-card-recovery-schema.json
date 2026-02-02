@@ -1,0 +1,216 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HowTo",
+      "name": "Canon SD卡格式化後照片救援",
+      "description": "完整的 Canon 相機 SD卡格式化後照片救援教學，適用所有 EOS 和 PowerShot 機型",
+      "image": [
+        "https://your-domain.com/images/generated_d5baac91.jpeg",
+        "https://your-domain.com/images/generated_cdc621ea.jpeg",
+        "https://your-domain.com/images/generated_9c8be4d3.png"
+      ],
+      "totalTime": "PT45M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "PhotoRec 資料救援軟體"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "SD 卡讀卡機"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "電腦（Windows 或 Mac）"
+        }
+      ],
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "格式化的 Canon SD 卡"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "立即停止使用 SD卡",
+          "text": "從相機中取出 SD卡，將寫保護開關撥到 Lock 位置，避免任何新資料寫入導致照片被覆蓋",
+          "url": "https://your-domain.com/guides/canon-sd-card-recovery#step-1",
+          "image": "https://your-domain.com/images/generated_3551574b.jpeg"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "選擇救援工具",
+          "text": "下載免費的 PhotoRec 軟體（成功率 90%）或付費的 Stellar Photo Recovery（成功率 95%）",
+          "url": "https://your-domain.com/guides/canon-sd-card-recovery#step-2"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "連接 SD卡到電腦",
+          "text": "使用讀卡機將 SD卡連接到電腦。如果 Windows 跳出格式化警告，點擊取消",
+          "url": "https://your-domain.com/guides/canon-sd-card-recovery#step-3",
+          "image": "https://your-domain.com/images/generated_cdc621ea.jpeg"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "執行 PhotoRec",
+          "text": "以系統管理員身分執行 PhotoRec，選擇你的 SD卡磁碟",
+          "url": "https://your-domain.com/guides/canon-sd-card-recovery#step-4"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "設定掃描參數",
+          "text": "選擇檔案系統類型為 [Other]，掃描模式選擇 [Whole]，指定儲存位置到電腦硬碟（不要儲存回 SD卡）",
+          "url": "https://your-domain.com/guides/canon-sd-card-recovery#step-5",
+          "image": "https://your-domain.com/images/generated_1d27e067.png"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "等待掃描完成",
+          "text": "掃描時間依容量而定：16GB 約 10-15 分鐘，32GB 約 20-30 分鐘，64GB 約 40-60 分鐘。掃描過程中不要移除 SD卡",
+          "url": "https://your-domain.com/guides/canon-sd-card-recovery#step-6",
+          "image": "https://your-domain.com/images/generated_9c8be4d3.png"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "檢查救援結果",
+          "text": "進入儲存資料夾，檢查 recup_dir 子資料夾中的照片。JPG 和 RAW 檔案會分別儲存。成功率通常在 85-95% 之間",
+          "url": "https://your-domain.com/guides/canon-sd-card-recovery#step-7"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Canon SD卡格式化後照片還能救回來嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以！如果格式化後立即停止使用 SD卡，成功率可達 95% 以上。關鍵是不要再拍攝新照片，因為新資料會覆蓋舊照片。使用專業的資料救援軟體如 PhotoRec 或 Stellar Photo Recovery 可以有效恢復大部分照片。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Windows 一直要求格式化 SD卡怎麼辦？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不要點擊格式化！這是因為 SD卡的檔案系統損壞，但資料還在。直接使用 PhotoRec 等救援軟體即可讀取，不需要在檔案總管中看到 SD卡。PhotoRec 可以直接讀取 RAW 格式的磁碟。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "為什麼救回的照片沒有檔名和日期？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "這是正常的。格式化會刪除檔案系統，包括檔案名稱和資料夾結構。但照片內容是完整的，而且 EXIF 資訊（拍攝日期、相機設定）都還在。你可以使用 Adobe Lightroom 等照片管理軟體依 EXIF 日期自動排序整理。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Canon 相機顯示 Card cannot be accessed 該怎麼處理？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "這通常是 SD卡接觸不良或檔案系統損壞。解決方法：1. 取出 SD卡，用橡皮擦清潔金屬接點；2. 確認鎖定開關在 Unlock 位置；3. 如果還是無法讀取，使用讀卡機連接電腦進行資料救援。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "PhotoRec 和 Stellar Photo Recovery 哪個比較好？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PhotoRec 完全免費且成功率達 90%，但介面較不友善。Stellar Photo Recovery 需付費 $49.99，但提供預覽功能、更高的成功率（95%）和技術支援。如果是新手或照片非常重要（婚禮、工作專案），建議使用 Stellar。一般情況下 PhotoRec 就足夠了。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "格式化後又拍了新照片，舊照片還救得回來嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "有可能，但成功率會降低。如果只拍了幾張照片，成功率約 60-80%。如果拍了大量照片，成功率會降到 20-40%。這是因為新照片會覆蓋舊照片所在的儲存空間。建議使用深度掃描模式提升救援機會。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "救援需要多久時間？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "掃描時間依 SD卡容量而定：16GB 約 10-15 分鐘，32GB 約 20-30 分鐘，64GB 約 40-60 分鐘。整個救援流程（包括下載軟體、設定、掃描、檢查結果）總共約 1-2 小時。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "所有 Canon 相機機型都適用這個方法嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的！這個方法適用於所有使用 SD卡的 Canon 相機，包括：EOS 系列單眼（EOS R5/R6/90D/M50 等）、PowerShot 系列消費型相機、VIXIA 攝影機。甚至 CFexpress 卡也可以用相同方法救援。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Canon SD卡格式化後照片救援完整指南 - 2024最新教學",
+      "description": "Canon 相機 SD卡不小心格式化了？本文提供完整的照片救援步驟，成功率高達 95%。支援 EOS、PowerShot 等所有 Canon 機型。",
+      "image": [
+        "https://your-domain.com/images/generated_d5baac91.jpeg",
+        "https://your-domain.com/images/generated_cdc621ea.jpeg",
+        "https://your-domain.com/images/generated_9c8be4d3.png"
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "SD卡救援專家"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SD卡救援網站",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://your-domain.com/logo.png"
+        }
+      },
+      "datePublished": "2024-01-30",
+      "dateModified": "2024-01-30",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://your-domain.com/guides/canon-sd-card-recovery"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "https://your-domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "救援指南",
+          "item": "https://your-domain.com/guides"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Canon SD卡格式化救援",
+          "item": "https://your-domain.com/guides/canon-sd-card-recovery"
+        }
+      ]
+    }
+  ]
+}
